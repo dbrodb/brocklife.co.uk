@@ -1,184 +1,224 @@
-[![Chulapa live
-preview](https://dieghernan.github.io/chulapa/assets/img/site/banner.png "live preview")](https://dieghernan.github.io/chulapa/)
+# Jekflix Template
 
-![GitHub release (latest by
-date)](https://img.shields.io/github/v/release/dieghernan/chulapa) [![Gem
-Version](https://badge.fury.io/rb/chulapa-jekyll.svg)](https://rubygems.org/gems/chulapa-jekyll)
-![GitHub](https://img.shields.io/github/license/dieghernan/chulapa)
-![Jekyll](https://img.shields.io/badge/jekyll-3.8.7-blue)
-![Bootstrap](https://img.shields.io/badge/bootstrap-4.5.0-blue)
-![Fontawesome](https://img.shields.io/badge/fontawesome-6.x-blue)
-![Algolia](https://img.shields.io/badge/algolia-4.x-blue)
-![lunr](https://img.shields.io/badge/lunr-2.x-blue)
-![mathjax](https://img.shields.io/badge/mathjax-3.x-blue)
-![GHpages](https://img.shields.io/badge/gh--pages-ready-succes)
-![google-analytics](https://img.shields.io/badge/google--analytics-ready-succes)
-![disqus](https://img.shields.io/badge/disqus-ready-succes) ![social
-sharing](https://img.shields.io/badge/social--sharing-ready-succes)
-![seo](https://img.shields.io/badge/seo-ready-succes)
-![video](https://img.shields.io/badge/video--support-ok-succes)
-[![ko-fi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://ko-fi.com/dieghernan)
+![Jekflix Template Cover Image](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1505354182/jekflix-logo_mfngps.png)
 
-# [Chulapa](https://dieghernan.github.io/chulapa/)
+See the [demo here](https://jekflix.rossener.com/).
 
-### A full flexible Jekyll theme for Github Pages
+## What is it?
 
-## Notable features
+A theme for Jekyll inspired by Netflix panel for who loves movies and series and would like to have a blog with this cool appearance.
 
--   **Bootstrap 4** - Fully responsive
--   **Fontawesome 6** - v5 also supported. v4 is supported via shims but would
-    be deprecated at some point
--   **3 different navbar styles**
--   **Atom and RSS 2.0** feed
--   **Internal search** by Algolia, Lunr or Google Custom Search
--   **Comments** by Disqus and Giscus
--   **Masonry gallery**
--   **Video support** - self-hosted or from core providers: Youtube, Vimeo,
-    DailyMotion...
--   **Structured data** for better SEO
--   **Code highlight** - +20 Pygment styles
--   **Mathjax** inside
--   **Google Analytics**
--   **Twitter/X Cards** and **Open Graph** data valid for Facebook, LinkedIn and
-    WhatsApp
--   **14+ preinstalled skins**
--   **Powerful look-and-feel customization** with a dedicated sandbox
--   **Archive, cloud tag and index special layouts**
--   **Do you like breadcrumbs?** We have it.
--   **Multiple authors** with location, picture and social links. Travel blogs
-    and colaborative sites welcome!
+![Jekflix Screenshot Image](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566390829/jekflix-screenshot-2_zfiog2.jpg)
 
-A great alternative for blogs, news, portfolios and personal sites. Want to know
-more? [Go to Docs](https://dieghernan.github.io/chulapa/docs/01-install).
+## Features
 
-## Installation
+- [Live Search](docs/features.md#live-search)
+- [Estimated Reading Time](docs/features.md#estimated-reading-time)
+- [Reading Progress Bar](docs/features.md#reading-progress-bar) *(optional)*
+- ["New Post" tag](docs/features.md#new-post-tag)
+- [Load images on demand](docs/features.md#load-images-on-demand)
+- [Push Menu](docs/features.md#push-menu)
+- [SVG icons](docs/features.md#svg-icons)
+- [Shell script to create posts](docs/features.md#shell-script-to-create-posts)
+- [Tags page](docs/features.md#tags-page)
+- [About page](docs/features.md#about-page)
+- [Contact page](docs/features.md#contact-page)
+- [404 error page](docs/features.md#404-error-page)
+- [Feed RSS](docs/features.md#feed-rss)
+- [Disqus](docs/features.md#disqus) *(optional)*
+- [Featured post](docs/features.md#featured-post) *(optional)*
+- [Home page pagination](docs/features.md#home-page-pagination) *(optional)*
+- [Posts sidebar](docs/features.md#posts-sidebar) *(optional)*
+- [Paginated posts](docs/features.md#paginated-posts) *(optional)*
+- ["Before you go" modal](docs/features.md#before-you-go-modal) *(optional)*
+- [Post recommendation](docs/features.md#post-recommendation)
+- [Netlify CMS ready](docs/features.md#netlify-cms-ready)
+- [Translations](docs/setup.md#translations) **new!**
+- [Math Expressions](docs/features.md#math-expressions) *(optional)* **new!**
 
-Sample `_config` file
-[here](https://github.com/dieghernan/chulapa/blob/master/_config.yml).
+## SEO
 
-There are three possible ways for installing Chulapa:
+- Google Analytics
+- Meta tags
+- JSON-LD
+- Sitemap.xml
+- Social Media ready
 
-### A. Use our Github Template
+## Quick Install
 
-**Recommended if your are starting from scratch.**
+In the case you're installing to existing Jekyll project, add this line to your project's `Gemfile`:
 
-Create a Github account, click [this
-link](https://github.com/dieghernan/chulapa-101/generate) and quickstart your
-site!
+```
+gem "jekflix"
+```
 
-### B. Remote theme method
+Add this line to your project's `_config.yml`:
 
-**Recommended if you are migrating a previous site.**
+```
+theme: jekflix
+```
 
-If you prefer not to use the template, you can use the `jekyll-remote-theme`
-method. Just follow these steps:
+And then run:
 
-1.  Create a new GitHub repository or go to an existing one
+```
+$ bundle
+```
 
-2.  Add this line to your `_config.yml`:
+Or install it yourself as:
 
-    ``` yaml
+```
+$ gem install jekflix
+```
 
-    remote_theme: dieghernan/chulapa
+### Theme Colors
 
-    ... more config options
-    ```
+Create the file `/assets/css/styles.scss` and add:
 
-3.  Remove other `remote_theme/theme` instances of your `_config.yml` file.
+```
+---
+---
 
-### C. Gem-based method 💎
+$themeColor: #ff0a16;
+$primaryDark: #141414;
+$accentDark: #ffffff;
+$lightGray: #f2f2f2;
+$texts: #333333;
 
-With Gem-based themes, directories such as the `assets`, `_layouts`,
-`_includes`, and `_sass` are stored in the theme's gem, hidden from your
-immediate view. This allows for easier installation and updating as you don't
-have to manage any of the theme files.
+@import "jekflix";
+```
 
-To install as a Gem-based theme:
+Modify the variables above to change your theme colors.
 
-1.  Add the following to your `Gemfile`:
+### Site configuration
 
-    ``` ruby
-    gem "chulapa-jekyll"
-    ```
+Below are some properties you can change in your project `_config.yml`, check the [documentation](docs/settings.md#settings) for more details.
 
-2.  Fetch and update bundled gems by running the following
-    [Bundler](https://bundler.io/) command:
+```
+# Site Settings
+name: Jekflix
+title: Jekflix | A blog theme for Jekyll
+description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
+tags:
+  - blog
+  - template
+  - jekyll
+  - theme
+  - netlify
+email: youremail@xyz.com
+disqus_username: disqus_username
+show_hero: true
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Contact
+    url: /contact
+  - title: Feed
+    url: /feed.xml
 
-    ``` bash
-    bundle
-    ```
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: github_username
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
 
-3.  Set the `theme` in your project's Jekyll `_config.yml` file:
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
 
-    ``` yaml
-    theme: chulapa-jekyll
-    ```
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+language: "en"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
 
-To update the theme run `bundle update`.
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+show_get_theme_btn: true
+use_logo: false
 
-## Configuration and Layouts
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
 
-You have available an extensive documentation
-[here](https://dieghernan.github.io/chulapa/docs/01-install)
+# SASS
+sass:
+  style: compressed
 
-## Performance
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
+```
 
-[![Performance](https://raw.githubusercontent.com/dieghernan/chulapa/master/github-metrics.svg)](https://pagespeed.web.dev/report?url=https://dieghernan.github.io/chulapa/)
+## Setup
+
+In the case you're cloning this repo, follow those instructions:
+
+- [Environment](docs/setup.md#environment)
+- [Installing template](docs/setup.md#installing-template)
+- [Running local](docs/setup.md#running-local)
+
+### Customization
+
+See the [settings documentation](docs/settings.md#settings) to customize layout, titles, social media and more.
+
+### Theme
+
+You can easily change the theme colors by changing the file `src/yml/theme.yml`, then running `gulp build` in your terminal.
+
+#### GitHub pages
+
+It's a known issue that you can't run Gulp when deploying the website into GitHub pages. So, you must change the theme colors and run `gulp build` locally, then push the changes into your repo, there is no other way.
+
+To see how your website is going to look like when you deploy it, run `bundle exec jekyll serve` locally and access `http://127.0.0.1:4000/`.
+
+## Posts
+
+Use the [Front Matter properties](docs/post.md#front-matter-properties) to create posts.
+
+> **Note:** In the case you're cloning this repo, you can use the available [script](docs/post.md#creating-a-post) to generate posts automatically.
+
+## Questions?
+
+File a [GitHub issue](https://github.com/thiagorossener/jekflix-template/issues/new) please.
+
+## Author
+
+[Thiago Rossener](https://rossener.com/)
+
+Do you like my work? Buy me a coffee!
+
+<a href="https://www.buymeacoffee.com/thiagorossener" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## License
 
-[The MIT License](https://dieghernan.github.io/chulapa/license)
-
-## Attributions
-
-**Chulapa** is a font owned by the City Council of Madrid designed and produced
-by Joancarles Casasín y Pablo Gámez on a previous design of Silvia Fernández
-Palomar licensed under [Creative Commons CC BY, Versión
-4.0](https://creativecommons.org/licenses/by/4.0/). This theme incorporates a
-modification of this work in order to provide support to the english language.
-
-Bootstrap v.4.5 is released under the [MIT
-license](https://github.com/twbs/bootstrap/blob/v4.5.0/LICENSE) and is copyright
-2020 Twitter.
-
-Fontawesome 6.x is free, open source, and GPL friendly -
-[License](https://fontawesome.com/license/free) (Icons: CC BY 4.0, Fonts: SIL
-OFL 1.1, Code: MIT License).
-
-This theme incorporates some pieces of code from [Minimal
-Mistakes](https://mmistakes.github.io/minimal-mistakes/), Copyright (c)
-2013-2020 [Michael Rose](https://mademistakes.com/) and contributors distributed
-under the terms of the [MIT
-license](https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE).
-
-This theme incorporates [Pygments CSS
-Themes](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html),
-developed by [jwarby](https://github.com/jwarby/) distributed under the terms of
-[The
-Unlicense](https://github.com/jwarby/jekyll-pygments-themes/blob/master/UNLICENSE.txt).
-
-This theme incorporates [Ferpal
-Sans](https://www.silviaferpal.com/portfolio-1/ferpalsans) developed by Silvia
-Ferpal and it's free for personal use.
-
-This theme incorporates [Jekyll Pure Liquid Table of
-Contents](https://github.com/allejo/jekyll-toc), Copyright © 2017 [Vladimir
-"allejo" Jimenez](https://github.com/allejo) distributed under the terms of the
-[MIT license](https://github.com/allejo/jekyll-toc/blob/master/LICENSE.MIT.md).
-
-This theme incorporates [Compress HTML in Jekyll](http://jch.penibelst.de/),
-Copyright (c) 2014 [Anatol Broder](https://github.com/penibelst) distributed
-under the terms of the [MIT
-license](https://github.com/penibelst/jekyll-compress-html/blob/master/LICENSE).
-
-This theme incorporates [Lunr](http://lunrjs.com), Copyright (c) 2013 Oliver
-Nightingale. Lunr is distributed under the terms of the [MIT
-License](https://github.com/olivernn/lunr.js/blob/master/LICENSE).
-
-This theme uses graphic resources from
-[Unplash](https://unsplash.com/@dieghernan/collections).
-
-This theme uses graphic resources from
-[Pexels](https://www.pexels.com/@dieghernan-3081919/collections/).
-
-This theme uses graphic resources from [Lorem Picsum](https://picsum.photos/).
+*Jekflix Template* is available under the MIT license. See the [LICENSE](https://github.com/thiagorossener/jekflix-template/blob/master/LICENSE) file for more info.
