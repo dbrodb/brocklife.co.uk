@@ -1,22 +1,22 @@
 remote_theme: dieghernan/chulapa
 
 
-repository: dieghernan/chulapa
-url: "https://dieghernan.github.io"
-baseurl: "/chulapa"
+repository: dbrodb/brocklife
+url: "https://brocklife.github.io"
+baseurl: "/brocklife"
 
-title: Chulapa
-subtitle: A full flexible Jekyll theme
+title: Brock Life
+subtitle: For when life keeps raining down on you, like a big bag of exploding dildos....
 description: Template for creating free sites on Github Pages
 og_image: "./assets/img/site/banner.png"
 twitter_site: dhernangomez
 timezone: "Europe/Madrid"
 author:
-  name: dieghernan
+  name: ten4rubberducky
   avatar: ./assets/img/site/dieghernan-avatar.png
   location: Madrid, Spain
   links:
-    - url: https://github.com/dieghernan/
+    - url: https://github.com/dbrodb/
       icon: "fab fa-github"
       label: GitHub
     - url: https://dieghernan.github.io/
